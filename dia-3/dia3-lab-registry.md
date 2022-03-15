@@ -160,4 +160,4 @@ Status: Downloaded newer image for br.icr.io/< namespace >/student57-basic-expre
 7f6970f196264a3e70c7f30ceab55b6d43d38b67c484f1a8f90e98b5f02389e4
 ```
 
-And done! Now you have your image properly pushed to a container registry! 
+And done! Now you have your image properly pushed to a container registry!
