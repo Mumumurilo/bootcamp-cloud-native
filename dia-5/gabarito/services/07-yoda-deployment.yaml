@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yoda-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: yoda
+  template:
+    metadata:
+      labels:
+        app: yoda
+    spec:
+      containers:
+        - image: bitnami/nginx:1.16.1
+          name: c
+          ports:
+            - containerPort: 8080

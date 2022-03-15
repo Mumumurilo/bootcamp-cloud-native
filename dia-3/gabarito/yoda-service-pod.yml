@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: bitnami/nginx
+    ports:
+    - containerPort: 80
+    command: ['nginx']
+    args: ["-g", "daemon off;", "-q"]

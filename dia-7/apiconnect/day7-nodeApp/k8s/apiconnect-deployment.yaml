@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apiconnect-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: apiconnect
+  template:
+    metadata:
+      labels:
+        app: apiconnect
+    spec:
+      containers:
+        - image: us.icr.io/tecban-bootcamp/apiconnect-lab:latest 
+          name: node-express-app
+          ports:
+            - containerPort: 6005

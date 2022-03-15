@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jedi-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: jedi-deployment
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: jedi-deployment
+    spec:
+      containers:
+        - image: bitnami/nginx:1.16.1
+          name: jedi-ws
