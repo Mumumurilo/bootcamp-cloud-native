@@ -4,7 +4,7 @@
 
 connect to the kubernetes cluster
 ```bash
-ibmcloud ks cluster config --cluster bootcamp-kubernetes
+ibmcloud ks cluster config --cluster <clustername>
 ```
 Check the connectivity
 ```bash
@@ -115,10 +115,10 @@ yoda-svc   ClusterIP   172.21.235.139   <none>        80/TCP         48s
 
 ### Validating internet access through node port into jedi-svc
 
-To access the jedi-svc we have to find out the public IP addresses of our worker nodes. Using `kubectl get nodes -o wide` gives us private and public ip addresses of our worker nodes. The worker nodes within IBM Cloud are attached to a public and a private VLAN. Alternatively you can also use `ibmcloud ks worker ls --cluster bootcamp-kubernetes`.
+To access the jedi-svc we have to find out the public IP addresses of our worker nodes. Using `kubectl get nodes -o wide` gives us private and public ip addresses of our worker nodes. The worker nodes within IBM Cloud are attached to a public and a private VLAN. Alternatively you can also use `ibmcloud ks worker ls --cluster <clustername>`.
 
 ```bash
-$ ibmcloud ks worker ls --cluster bootcamp-kubernetes
+$ ibmcloud ks worker ls --cluster <clustername>
 NAME             STATUS   ROLES    AGE    VERSION
 ID                                                       Public IP         Private IP       Flavor               State    Status   Zone    Version
 kube-btnneqaf0ve384q6rsm0-iksgarageda-default-00000171   159.122.100.82    10.134.237.244   b3c.4x16.encrypted   normal   Ready    fra02   1.17.11_1539

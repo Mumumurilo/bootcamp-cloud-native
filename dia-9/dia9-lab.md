@@ -3,7 +3,7 @@
 ## Administrative Setup - Ran by the administrators
 ```
 ibmcloud resource service-instance-create bootcamp-psql databases-for-postgresql standard us-south
-ibmcloud ks cluster service bind --cluster bootcamp-kubernetes --namespace default --service bootcamp-psql
+ibmcloud ks cluster service bind --cluster <clustername> --namespace default --service bootcamp-psql
 ```
 Manually change the secret and store it in a file
 get the secret, copy it to a yaml file, and change it up

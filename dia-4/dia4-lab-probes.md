@@ -5,7 +5,7 @@
 Apply kubernetes configuration
 
 ```bash
-kubect apply -f < nomeDoArquivo >
+kubectl apply -f < nomeDoArquivo >
 ```
 
 See running pods
@@ -22,7 +22,7 @@ Make sure everytime you create resources that you
 - target the right Kubernetes namespace and set it into your kubectl context
 
 ```bash
-ibmcloud ks cluster config --cluster bootcamp-kubernetes
+ibmcloud ks cluster config --cluster <clustername>
 kubectl config set-context --current --namespace=student< student id>
 ```
 
