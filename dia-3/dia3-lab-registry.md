@@ -2,6 +2,11 @@
 
 ## Prerequisites
 
+IBM Cloud cr plugin:
+```bash
+ibmcloud plugin install container-registry
+```
+
 This set of instructions requires that Docker is already installed and docker commands can be run from a bash shell. You can get more information at the [Docker website](https://docker.com/get-started).
 
 **Note**: This demo assumes that you are running in a "clean" environment. Clean means that you have not used docker with the images in this demo. This is important for someone who is using docker for the first time, so they can see the activity as images are downloaded.

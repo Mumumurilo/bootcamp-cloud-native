@@ -2,32 +2,32 @@
 
 ## Prerequisites
 
-IBM Cloud ks plugin:
-```bash
-ibmcloud plugin install container-service
-```
-
 Installing the Kubernetes command line tool
 
-Mac:
+Mac Intel:
 ```bash
-curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/amd64/kubectl"
+```
+
+Mac Apple Silicon:
+```bash
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/arm64/kubectl"
 ```
 
 Linux:
 ```bash
-curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 ```
 
 Windows:
 ```bash
-curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+curl -LO "https://dl.k8s.io/release/v1.23.0/bin/windows/amd64/kubectl.exe"
 ```
 
 
 connect to the cluster
 ```bash
-ibmcloud ks cluster config --cluster bootcamp-kubernetes
+ibmcloud ks cluster config --cluster <clustername>
 ```
 
 Check the connectivity
