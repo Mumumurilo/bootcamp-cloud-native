@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+   name: yoda-service-config
+data:
+   color: blue
+   location: naboo
