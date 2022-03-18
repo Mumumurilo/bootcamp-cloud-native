@@ -4,9 +4,22 @@ metadata:
   name: yoda-service
 spec:
   containers:
-  - name: nginx
-    image: bitnami/nginx
-    ports:
-    - containerPort: 80
-    command: ['nginx']
-    args: ["-g", "daemon off;", "-q"]
+    - name: nginx
+      image: bitnami/nginx
+      command: [ "/bin/sh","-c","cat /etc/yoda-service/yoda.cfg" ]
+      ports:
+        - containerPort: 80
+      resources:
+        requests:
+          memory: "64Mi"
+          cpu: "250m"
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
+      volumeMounts:
+        - name: yoda-config
+          mountPath: /etc/yoda-service
+  volumes:
+    - name: yoda-config
+      configMap:
+        name: yoda-service-config
