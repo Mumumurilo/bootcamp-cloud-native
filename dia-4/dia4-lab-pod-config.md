@@ -9,7 +9,7 @@ Make sure everytime you create resources that you
 
 ```bash
 ibmcloud ks cluster config --cluster **kubeclusterid**
-kubectl config set-context --current --namespace=dev-**yourinitials**
+kubectl config set-context --current --namespace=student**yourinitials**
 ```
 
 ## Supporting Information
