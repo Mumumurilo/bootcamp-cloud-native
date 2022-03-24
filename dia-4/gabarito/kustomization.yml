@@ -1,4 +1,0 @@
-configMapGenerator:
-- name: yoda-service-config
-  files:
-  - /etc/yoda-service/yoda.cfg"
