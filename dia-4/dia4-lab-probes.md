@@ -11,7 +11,7 @@ kubectl apply -f < nomeDoArquivo >
 See running pods
 
 ```bash
-kubect get pods
+kubectl get pods
 ```
 
 ## Prerequisites
