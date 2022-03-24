@@ -3,5 +3,6 @@ kind: ConfigMap
 metadata:
    name: yoda-service-config
 data:
-   color: blue
-   location: naboo
+  yoda.cfg: |
+   yoda.baby.power=100000000
+   yoda.strength=10

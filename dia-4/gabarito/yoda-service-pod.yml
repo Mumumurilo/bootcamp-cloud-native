@@ -3,12 +3,10 @@ kind: Pod
 metadata:
   name: yoda-service
 spec:
+  serviceAccountName: yoda-sa
   containers:
     - name: nginx
       image: bitnami/nginx
-      command: [ "/bin/sh","-c","cat /etc/yoda-service/yoda.cfg" ]
-      ports:
-        - containerPort: 80
       resources:
         requests:
           memory: "64Mi"
@@ -17,9 +15,15 @@ spec:
           memory: "128Mi"
           cpu: "500m"
       volumeMounts:
-        - name: yoda-config
+        - name: yoda
           mountPath: /etc/yoda-service
+      env:
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: yoda-db-password
+              key: password
   volumes:
-    - name: yoda-config
+    - name: yoda
       configMap:
         name: yoda-service-config
