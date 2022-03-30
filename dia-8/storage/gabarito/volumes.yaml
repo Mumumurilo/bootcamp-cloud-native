@@ -1,0 +1,32 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: postgresql-<YOURID>-pv
+spec:
+  storageClassName: ibmc-file-retain-silver
+  capacity:
+    storage: 20Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /bitnami/postgresql/data
+
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: postgresql-<YOURID>-pvc
+  labels:
+    billingType: hourly
+    region: br-sao
+    zone: sao01
+spec:
+  storageClassName: ibmc-file-retain-silver
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+      iops: "80"
