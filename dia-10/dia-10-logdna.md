@@ -14,6 +14,7 @@ kubectl config set-context --current --namespace=student**yourinitials**
 ## Supporting Information
 
 <https://cloudnative101.dev/electives/logging/logdna/> (video gives great overview)
+
 <https://cloudnative101.dev/electives/logging/logdna/activities/dashboards/>
 <https://docs.logdna.com/docs/filters>
 <https://docs.logdna.com/docs/search>
@@ -40,30 +41,30 @@ If you do not see a command prompt, try pressing enter.
 ### Use the LogDNA Dashboard to find your logs
 
 1. Startup the shared LogDNA dashboard that can be found in **Navigation Menu** -> **Observability** -> **Logging** .
-   ![image](images/lab-logdna-01.png)
+   ![image](../images/lab-logdna-01.png)
 
 1. Find your log statements in the LogDNA dashboard by just leveraging the search field
 
 1. Additionally add a filter with the label.app attribute. It can be very easily added by just selecting a row, selecting the field you want to add to your filter and press the "+" button.
-   ![image](images/lab-logdna-02.png)
-   
+   ![image](../images/lab-logdna-02.png)
+
 
 1. Experiment with AND and OR operations, attached infos from the syntax help.
-   ![image](images/lab-logdna-03.png)
+   ![image](../images/lab-logdna-03.png)
 
 ### Create a view based on your current query
 
 1. Create a LogDNA view called 'yourinitials-app-view'. By doing so you save your current search configuration into a persistent view.
-   ![image](images/lab-logdna-04.png)
+   ![image](../images/lab-logdna-04.png)
 
 ### Create an alert based on your view
 
 1. Create an Alert Preset called 'yourinitals-email-preset'.
-   ![image](images/lab-logdna-05.png)
+   ![image](../images/lab-logdna-05.png)
 1. Work with the default settings, just add your email address.
-   ![image](images/lab-logdna-06.png)
+   ![image](../images/lab-logdna-06.png)
 1. Attach this email preset to your view as an alert.
-   ![image](images/lab-logdna-07.png)
+   ![image](../images/lab-logdna-07.png)
 
 1. Create additional log entries
 
