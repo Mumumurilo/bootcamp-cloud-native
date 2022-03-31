@@ -7,7 +7,7 @@
 
 ```bash
 ibmcloud ks cluster config --cluster **kubeclusterid**
-kubectl config set-context --current --namespace=dev-**yourinitials**
+kubectl config set-context --current --namespace=student**yourinitials**
 ```
 
 ## References (but not needed for this lab)
@@ -53,7 +53,7 @@ Be patient, it can take a few minutes until the first metrics data flows into ou
 2. Create a new Custom Dashboard based on this template called "yourinitials - Kubernetes Service Golden Signals" .
    ![image](../images/lab-sysdig-02.png)
 
-3. Scope it down to your namespace dev-yourinitials and your deployment yourinitials-web-app.
+3. Scope it down to your namespace studentyourinitials and your deployment yourinitials-web-app.
    ![image](../images/lab-sysdig-03.png)
 
 4. In Dashboards -> My Dashboards you will find your created dashboard.
